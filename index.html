@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalyan Saragadam | Aspiring Frontend & AI Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
+        
+        :root {
+            --accent: 59 130 246;
+        }
+        
+        .tail-container {
+            font-family: 'Inter', system_ui, sans-serif;
+        }
+        
+        .logo-font {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .hero-bg {
+            background: radial-gradient(at center bottom, rgb(15 23 42), rgb(9 9 11));
+        }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+        }
+
+        .nav-link {
+            position: relative;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background: rgb(var(--accent));
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+
+        .project-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
+        }
+
+        .skill-bar {
+            transition: width 1.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .typing {
+            overflow: hidden;
+            white-space: nowrap;
+            border-right: 3px solid rgb(147 197 253);
+            animation: typing 3.5s steps(30, end) infinite alternate;
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        .glow {
+            filter: drop-shadow(0 0 25px rgb(147 197 253 / 0.5));
+        }
+    </style>
+</head>
+<body class="tail-container bg-zinc-950 text-zinc-200 overflow-x-hidden">
+    <!-- NAVBAR -->
+    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="w-9 h-9 bg-blue-500 rounded-2xl flex items-center justify-center text-white font-bold text-2xl logo-font">K</div>
+                <div>
+                    <span class="text-2xl font-semibold logo-font tracking-tighter text-white">Kalyan</span>
+                    <span class="text-xs block -mt-1 text-blue-400">SARAGADAM</span>
+                </div>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#about" class="nav-link text-zinc-400 hover:text-white">About</a>
+                <a href="#education" class="nav-link text-zinc-400 hover:text-white">Education</a>
+                <a href="#skills" class="nav-link text-zinc-400 hover:text-white">Skills</a>
+                <a href="#projects" class="nav-link text-zinc-400 hover:text-white">Projects</a>
+                <a href="#certifications" class="nav-link text-zinc-400 hover:text-white">Certifications</a>
+                <a href="#achievements" class="nav-link text-zinc-400 hover:text-white">Achievements</a>
+            </div>
+
+            <div class="flex items-center gap-4">
+                <a href="https://github.com/kalyan870" target="_blank" 
+                   class="flex items-center justify-center w-10 h-10 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i class="fab fa-github text-2xl"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/saragadam-kalyan-168337348" target="_blank"
+                   class="flex items-center justify-center w-10 h-10 rounded-2xl hover:bg-white/10 transition-colors">
+                    <i class="fab fa-linkedin text-2xl"></i>
+                </a>
+               <a href="resume.pdf" target="_blank"
+   class="px-6 py-3 bg-white text-zinc-900 font-semibold rounded-3xl flex items-center gap-2 hover:bg-blue-500 hover:text-white transition-all text-sm">
+    <i class="fas fa-download"></i>
+    <span>Resume</span>
+</a>
+                </a>
+                <button onclick="toggleMobileMenu()" 
+                        class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- MOBILE MENU -->
+        <div id="mobileMenu" class="hidden md:hidden fixed inset-0 bg-zinc-950 z-50 pt-20 px-6">
+            <div class="flex flex-col gap-6 text-xl font-medium">
+                <a href="#about" onclick="toggleMobileMenu()" class="py-2">About</a>
+                <a href="#education" onclick="toggleMobileMenu()" class="py-2">Education</a>
+                <a href="#skills" onclick="toggleMobileMenu()" class="py-2">Skills</a>
+                <a href="#projects" onclick="toggleMobileMenu()" class="py-2">Projects</a>
+                <a href="#certifications" onclick="toggleMobileMenu()" class="py-2">Certifications</a>
+                <a href="#achievements" onclick="toggleMobileMenu()" class="py-2">Achievements</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero-bg min-h-screen flex items-center pt-20 relative">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
+            <div class="space-y-8">
+                <div class="inline-flex items-center gap-2 bg-white/5 px-5 py-2 rounded-3xl text-sm">
+                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+                    <span class="text-emerald-400 font-medium">Open to Internships • Jan 2026</span>
+                </div>
+                
+                <h1 class="text-7xl md:text-8xl font-semibold leading-none logo-font tracking-tighter text-white">
+                    Saragadam<br>Kalyan
+                </h1>
+                
+                <div class="text-3xl text-blue-400 font-medium flex items-center gap-3">
+                    <span id="typing" class="typing">Aspiring Frontend &amp; AI Web Developer</span>
+                </div>
+                
+                <p class="text-xl text-zinc-400 max-w-md">
+                    2nd Year B.Tech CSE Student • Building beautiful, intelligent web experiences with modern tech.
+                </p>
+                
+                <div class="flex items-center gap-4">
+                    <a href="#contact" 
+                       class="px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all font-semibold rounded-3xl text-lg flex items-center gap-3">
+                        Let's Connect
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" 
+                       class="px-8 py-4 border border-white/30 hover:border-white/70 transition-all font-semibold rounded-3xl text-lg">
+                        View Projects
+                    </a>
+                </div>
+                
+                <div class="flex items-center gap-8 pt-8 text-sm">
+                    <div>
+                        <div class="text-emerald-400 text-2xl font-semibold">15+</div>
+                        <div class="text-zinc-500">Projects Built</div>
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 text-2xl font-semibold">1★</div>
+                        <div class="text-zinc-500">CodeChef Rating</div>
+                    </div>
+                    <div>
+                        <div class="text-emerald-400 text-2xl font-semibold">5</div>
+                        <div class="text-zinc-500">Certifications</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PROFILE PHOTO -->
+            <div class="flex justify-center md:justify-end">
+                <div class="relative">
+                    <div class="absolute -inset-8 bg-gradient-to-br from-blue-500 via-purple-500 to-cyan-400 rounded-[4rem] opacity-30 blur-3xl"></div>
+                    <img id="profileImg"
+     src="profile.png"
+     alt="Saragadam Kalyan"
+     class="w-96 h-96 object-cover rounded-3xl shadow-2xl border-8 border-zinc-900 glow">
+                    <div class="absolute -bottom-4 -right-4 bg-zinc-900 px-6 py-3 rounded-3xl flex items-center gap-3 shadow-xl">
+                        <div class="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
+                        <span class="font-medium text-sm">Available for opportunities</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- SCROLL INDICATOR -->
+        <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-2 text-xs text-zinc-500">
+            <div class="w-px h-12 bg-gradient-to-b from-transparent via-zinc-400 to-transparent"></div>
+            SCROLL
+        </div>
+        
+        <!-- SOCIAL FLOAT -->
+        <div class="hidden lg:flex fixed right-8 bottom-12 flex-col gap-6">
+            <a href="https://github.com/kalyan870" target="_blank" class="text-zinc-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/saragadam-kalyan-168337348" target="_blank" class="text-zinc-400 hover:text-white text-2xl transition-colors"><i class="fab fa-linkedin"></i></a>
+            <a href="mailto:saragadamkalyan068@gmail.com" class="text-zinc-400 hover:text-white text-2xl transition-colors"><i class="fas fa-envelope"></i></a>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-24 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-12 gap-16">
+                <div class="md:col-span-5">
+                    <div class="sticky top-28">
+                        <span class="px-4 py-2 bg-white/5 rounded-full text-xs tracking-widest">WHO AM I</span>
+                        <h2 class="text-6xl font-semibold logo-font tracking-tighter mt-6 leading-none">Passionate builder<br>of digital experiences</h2>
+                        <div class="mt-8 text-zinc-400 text-lg">
+                            Currently pursuing B.Tech in Computer Science (2nd year) at Vignan's Institute of Information Technology, Visakhapatnam.
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:col-span-7 space-y-8 text-zinc-300 text-lg leading-relaxed">
+                    <p>
+                        I am a motivated 2nd-year Computer Science student with a strong passion for frontend web development and AI-powered applications. 
+                        I have hands-on experience with HTML, CSS, JavaScript, Python, and Machine Learning fundamentals. 
+                        I actively practice Data Structures &amp; Algorithms on CodeChef (1★ rating, username: chinna_182) and am exploring Microsoft Azure cloud fundamentals.
+                    </p>
+                    <p>
+                        What sets me apart is my genuine interest in building useful, production-ready applications rather than just completing coursework. 
+                        I enjoy learning by building, breaking, and improving projects continuously. I am currently seeking frontend, full-stack, or AI-web development opportunities where I can contribute meaningfully while growing rapidly.
+                    </p>
+                    
+                    <!-- PERSONAL DETAILS GRID -->
+                    <div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
+                        <div>
+                            <div class="uppercase text-xs tracking-widest text-zinc-500 mb-2">Personal Info</div>
+                            <div class="space-y-4 text-sm">
+                                <div class="flex justify-between"><span class="text-zinc-400">Date of Birth</span><span>18 August 2006</span></div>
+                                <div class="flex justify-between"><span class="text-zinc-400">Location</span><span>Visakhapatnam, Andhra Pradesh</span></div>
+                                <div class="flex justify-between"><span class="text-zinc-400">Phone</span><span>+91 89194 96141</span></div>
+                                <div class="flex justify-between"><span class="text-zinc-400">Email</span><span class="text-blue-400">saragadamkalyan068@gmail.com</span></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="uppercase text-xs tracking-widest text-zinc-500 mb-2">Links</div>
+                            <div class="flex flex-col gap-3 text-sm">
+                                <a href="https://github.com/kalyan870" target="_blank" class="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                                    <i class="fab fa-github w-5"></i> GitHub @kalyan870
+                                </a>
+                                <a href="https://www.linkedin.com/in/saragadam-kalyan-168337348" target="_blank" class="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                                    <i class="fab fa-linkedin w-5"></i> LinkedIn Profile
+                                </a>
+                                <a href="https://www.codechef.com/users/chinna_182" target="_blank" class="flex items-center gap-3 hover:text-blue-400 transition-colors">
+                                    <i class="fas fa-code w-5"></i> CodeChef • chinna_182
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- COVER LETTER SUMMARY -->
+                    <div class="pt-12 border-t border-white/10">
+                        <div class="italic text-zinc-400 text-base border-l-4 border-blue-500 pl-6">
+                            "I am confident that my foundational skills, combined with a strong learning mindset, would allow me to add value while gaining meaningful experience from your team."
+                        </div>
+                        <div class="text-xs text-zinc-500 mt-4">— Excerpt from my application letter, 1st January 2026</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <span class="text-blue-400 text-sm font-medium">ACADEMIC JOURNEY</span>
+                    <h2 class="text-5xl font-semibold logo-font tracking-tighter">Education</h2>
+                </div>
+            </div>
+            
+            <div class="max-w-2xl">
+                <div class="glass border border-white/10 rounded-3xl p-8">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <div class="font-semibold text-2xl">B.Tech Computer Science</div>
+                            <div class="text-blue-400">Vignan's Institute of Information Technology, Visakhapatnam</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="bg-white/10 text-xs px-4 py-1 rounded-2xl">2024 — 2028</div>
+                            <div class="text-xs text-zinc-500 mt-2">2nd Year • CGPA: Pursuing</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 text-zinc-400">
+                        Focused on core computer science, web technologies, artificial intelligence, and cloud computing.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">MY TOOLKIT</span>
+                <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Skills &amp; Technologies</h2>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Skill cards -->
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
+                    <div class="text-5xl mb-6">🌐</div>
+                    <div class="font-semibold text-2xl mb-2">Frontend</div>
+                    <div class="text-zinc-400 text-sm">HTML • CSS • JavaScript • Responsive Design • Tailwind</div>
+                    <div class="h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
+                        <div class="skill-bar h-1 w-[95%] bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
+                    </div>
+                </div>
+                
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
+                    <div class="text-5xl mb-6">🐍</div>
+                    <div class="font-semibold text-2xl mb-2">Python &amp; ML</div>
+                    <div class="text-zinc-400 text-sm">Python • Machine Learning Basics • Prompt Engineering</div>
+                    <div class="h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
+                        <div class="skill-bar h-1 w-[85%] bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
+                    </div>
+                </div>
+                
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
+                    <div class="text-5xl mb-6">☁️</div>
+                    <div class="font-semibold text-2xl mb-2">Cloud &amp; Tools</div>
+                    <div class="text-zinc-400 text-sm">Microsoft Azure • Git • n8n Automation</div>
+                    <div class="h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
+                        <div class="skill-bar h-1 w-[80%] bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
+                    </div>
+                </div>
+                
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
+                    <div class="text-5xl mb-6">⚡</div>
+                    <div class="font-semibold text-2xl mb-2">Problem Solving</div>
+                    <div class="text-zinc-400 text-sm">Data Structures • Algorithms • Competitive Programming</div>
+                    <div class="h-1 bg-white/10 rounded-full mt-8 overflow-hidden">
+                        <div class="skill-bar h-1 w-[90%] bg-gradient-to-r from-amber-400 to-orange-400 rounded-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <span class="text-blue-400 text-sm font-medium">SELECTED WORK</span>
+                    <h2 class="text-5xl font-semibold logo-font tracking-tighter">Featured Projects</h2>
+                </div>
+                <a href="https://github.com/kalyan870" target="_blank"
+                   class="flex items-center gap-3 text-sm font-medium group">
+                    ALL PROJECTS ON GITHUB 
+                    <span class="group-hover:translate-x-1 transition">→</span>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 flex items-center justify-center text-6xl">
+                        💬
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center">
+                            <div class="font-semibold text-xl">AI Chatbot</div>
+                            <span class="text-xs bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-2xl">Python + JS</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 mt-3 leading-relaxed">
+                            Intelligent conversational agent with natural language processing and context memory.
+                        </p>
+                        <div class="mt-6 text-xs flex gap-2">
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#AI</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#NLP</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center text-6xl">
+                        🖼️
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center">
+                            <div class="font-semibold text-xl">Image Classifier</div>
+                            <span class="text-xs bg-violet-500/10 text-violet-400 px-3 py-1 rounded-2xl">ML</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 mt-3 leading-relaxed">
+                            Deep learning model to classify images with high accuracy using TensorFlow/PyTorch.
+                        </p>
+                        <div class="mt-6 text-xs flex gap-2">
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#ComputerVision</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#Python</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
+                    <div class="h-56 bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center text-6xl">
+                        🕸️
+                    </div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-center">
+                            <div class="font-semibold text-xl">Web Scraper</div>
+                            <span class="text-xs bg-orange-500/10 text-orange-400 px-3 py-1 rounded-2xl">Automation</span>
+                        </div>
+                        <p class="text-sm text-zinc-400 mt-3 leading-relaxed">
+                            Robust Python scraper with BeautifulSoup &amp; Selenium for real-time data extraction.
+                        </p>
+                        <div class="mt-6 text-xs flex gap-2">
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#n8n</span>
+                            <span class="bg-white/10 px-3 py-1 rounded-2xl">#Automation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">PROOF OF LEARNING</span>
+                <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Certifications</h2>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-6">🤖</div>
+                    <div class="font-semibold">n8n Automation / Workflow Automation</div>
+                    <div class="text-xs text-zinc-500 mt-1">Professional Certification</div>
+                </div>
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-6">☁️</div>
+                    <div class="font-semibold">Google Cloud Certified Professional Cloud Architect</div>
+                    <div class="text-xs text-zinc-500 mt-1">Issued by Google Cloud</div>
+                </div>
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-6">🔒</div>
+                    <div class="font-semibold">Cyber Security Overview</div>
+                    <div class="text-xs text-zinc-500 mt-1">Foundational Certification</div>
+                </div>
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-6">🐍</div>
+                    <div class="font-semibold">Python Essentials</div>
+                    <div class="text-xs text-zinc-500 mt-1">Core Python Programming</div>
+                </div>
+                <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
+                    <div class="text-4xl mb-6">📄</div>
+                    <div class="font-semibold">HTML Certification</div>
+                    <div class="text-xs text-zinc-500 mt-1">Modern Web Markup</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="py-24 bg-zinc-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">RECOGNITION</span>
+                <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Achievements &amp; Awards</h2>
+            </div>
+            
+            <div class="max-w-2xl mx-auto space-y-8">
+                <div class="flex gap-8 items-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">🏆</div>
+                    <div>
+                        <div class="font-semibold">Dean’s List</div>
+                        <div class="text-sm text-zinc-400">Vignan's Institute of Information Technology • Consistent Academic Excellence</div>
+                    </div>
+                </div>
+                <div class="flex gap-8 items-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">🍜</div>
+                    <div>
+                        <div class="font-semibold">CodeChef Competitive Programmer • 1★</div>
+                        <div class="text-sm text-zinc-400">Profile: <a href="https://www.codechef.com/users/chinna_182" target="_blank" class="text-blue-400 hover:underline">chinna_182</a><br>Regular contest participation • Strong in arrays, loops &amp; logic building</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-20">
+                <div>
+                    <h2 class="text-6xl font-semibold logo-font tracking-tighter leading-none">Let's build something<br>extraordinary together</h2>
+                    <div class="mt-10 text-zinc-400 max-w-md">
+                        Whether you're hiring for an internship, have a project in mind, or just want to chat about web development or AI — I'm all ears.
+                    </div>
+                    
+                    <div class="mt-16 space-y-6">
+                        <div class="flex items-center gap-6">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">📍</div>
+                            <div>
+                                <div class="font-medium">Visakhapatnam, Andhra Pradesh</div>
+                                <div class="text-sm text-zinc-500">24-48-16/2, Vinayaka Nagar, Vuda Colony</div>
+                            </div>
+                        </div>
+                        <a href="mailto:saragadamkalyan068@gmail.com" class="flex items-center gap-6 hover:text-blue-400 transition-colors">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">✉️</div>
+                            <div>
+                                <div class="font-medium">saragadamkalyan068@gmail.com</div>
+                                <div class="text-sm text-zinc-500">Quick response guaranteed</div>
+                            </div>
+                        </a>
+                        <a href="tel:8919496141" class="flex items-center gap-6 hover:text-blue-400 transition-colors">
+                            <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">📱</div>
+                            <div>
+                                <div class="font-medium">+91 89194 96141</div>
+                                <div class="text-sm text-zinc-500">Available Mon–Fri, 9AM–6PM IST</div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- CONTACT FORM -->
+                <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-8">
+                    <div>
+                        <label class="block text-xs tracking-widest mb-2 text-zinc-400">YOUR NAME</label>
+                        <input type="text" name="name" required
+                               class="w-full bg-transparent border border-white/20 focus:border-blue-500 rounded-3xl px-6 py-5 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-widest mb-2 text-zinc-400">EMAIL ADDRESS</label>
+                        <input type="email" name="email" required
+                               class="w-full bg-transparent border border-white/20 focus:border-blue-500 rounded-3xl px-6 py-5 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-xs tracking-widest mb-2 text-zinc-400">MESSAGE</label>
+                        <textarea name="message" rows="6" required
+                                  class="w-full bg-transparent border border-white/20 focus:border-blue-500 rounded-3xl px-6 py-5 outline-none transition resize-none"></textarea>
+                    </div>
+                    <button type="submit"
+                            class="w-full bg-white text-zinc-950 py-6 rounded-3xl font-semibold text-lg hover:bg-blue-500 hover:text-white transition-all flex items-center justify-center gap-3">
+                        SEND MESSAGE
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-black py-12 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 text-center text-xs text-zinc-500">
+            <div class="flex justify-center gap-8 mb-8">
+                <a href="https://github.com/kalyan870" target="_blank" class="hover:text-white">GitHub</a>
+                <a href="https://www.linkedin.com/in/saragadam-kalyan-168337348" target="_blank" class="hover:text-white">LinkedIn</a>
+                <a href="https://www.codechef.com/users/chinna_182" target="_blank" class="hover:text-white">CodeChef</a>
+            </div>
+            <p>© 2026 Saragadam Kalyan • Built with passion in Visakhapatnam</p>
+            <p class="mt-2 text-[10px]">Made for showcasing skills • All rights reserved</p>
+        </div>
+    </footer>
+
+    <script>
+        // Tailwind script already loaded via CDN
+        
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu')
+            menu.classList.toggle('hidden')
+        }
+        
+        // Typing effect
+        const typingElement = document.getElementById('typing')
+        const phrases = [
+            "Aspiring Frontend & AI Web Developer",
+            "2nd Year CSE Student",
+            "Building Intelligent Web Apps"
+        ]
+        let phraseIndex = 0
+        let charIndex = 0
+        let currentPhrase = ''
+        let isDeleting = false
+        
+        function typeEffect() {
+            const currentText = phrases[phraseIndex]
+            
+            if (isDeleting) {
+                currentPhrase = currentText.substring(0, charIndex - 1)
+                charIndex--
+            } else {
+                currentPhrase = currentText.substring(0, charIndex + 1)
+                charIndex++
+            }
+            
+            typingElement.textContent = currentPhrase
+            
+            let typeSpeed = isDeleting ? 30 : 60
+            
+            if (!isDeleting && charIndex === currentText.length) {
+                typeSpeed = 1500
+                isDeleting = true
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false
+                phraseIndex = (phraseIndex + 1) % phrases.length
+                typeSpeed = 300
+            }
+            
+            setTimeout(typeEffect, typeSpeed)
+        }
+        
+        // Initialize typing after load
+        window.onload = () => {
+            // Trigger skill bars animation
+            const bars = document.querySelectorAll('.skill-bar')
+            bars.forEach(bar => {
+                const width = bar.style.width
+                bar.style.width = '0%'
+                setTimeout(() => {
+                    bar.style.width = width
+                }, 800)
+            })
+            
+            // Start typing
+            setTimeout(() => {
+                typeEffect()
+            }, 800)
+            
+            // Profile image fallback if not found
+            const profileImg = document.getElementById('profileImg')
+            profileImg.onerror = () => {
+                profileImg.src = 'https://picsum.photos/id/64/600/600'
+            }
+        }
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if (this.getAttribute('href') !== '#') {
+                    e.preventDefault()
+                    const target = document.querySelector(this.getAttribute('href'))
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        })
+                    }
+                }
+            })
+        })
+        
+        // Keyboard shortcut hint
+        console.log('%c👋 Hi there! Press "K" for a surprise.', 'color:#60a5fa; font-family:monospace')
+        document.addEventListener('keydown', (e) => {
+            if (e.key.toLowerCase() === 'k') {
+                document.documentElement.style.setProperty('--accent', '236 72 153')
+                setTimeout(() => {
+                    document.documentElement.style.setProperty('--accent', '59 130 246')
+                }, 1200)
+            }
+        })
+    </script>
+</body>
+</html>
