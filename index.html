@@ -9,15 +9,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap" rel="stylesheet">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@500;600&amp;display=swap');
-        
+
         :root {
             --accent: 59 130 246;
         }
-        
+
         .tail-container {
             font-family: 'Inter', system_ui, sans-serif;
         }
-        
+
         .logo-font {
             font-family: 'Space Grotesk', sans-serif;
         }
@@ -35,7 +35,7 @@
             position: relative;
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        
+
         .nav-link:after {
             content: '';
             position: absolute;
@@ -46,7 +46,7 @@
             background: rgb(var(--accent));
             transition: width 0.3s ease;
         }
-        
+
         .nav-link:hover:after {
             width: 100%;
         }
@@ -54,7 +54,7 @@
         .project-card {
             transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
         }
-        
+
         .project-card:hover {
             transform: translateY(-12px) scale(1.02);
             box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.4);
@@ -92,7 +92,7 @@
                     <span class="text-xs block -mt-1 text-blue-400">SARAGADAM</span>
                 </div>
             </div>
-            
+
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#about" class="nav-link text-zinc-400 hover:text-white">About</a>
                 <a href="#education" class="nav-link text-zinc-400 hover:text-white">Education</a>
@@ -103,7 +103,7 @@
             </div>
 
             <div class="flex items-center gap-4">
-                <a href="https://github.com/kalyan870" target="_blank" 
+                <a href="https://github.com/kalyan870" target="_blank"
                    class="flex items-center justify-center w-10 h-10 rounded-2xl hover:bg-white/10 transition-colors">
                     <i class="fab fa-github text-2xl"></i>
                 </a>
@@ -117,13 +117,13 @@
     <span>Resume</span>
 </a>
                 </a>
-                <button onclick="toggleMobileMenu()" 
+                <button onclick="toggleMobileMenu()"
                         class="md:hidden w-10 h-10 flex items-center justify-center text-2xl">
                     <i class="fas fa-bars"></i>
                 </button>
             </div>
         </div>
-        
+
         <!-- MOBILE MENU -->
         <div id="mobileMenu" class="hidden md:hidden fixed inset-0 bg-zinc-950 z-50 pt-20 px-6">
             <div class="flex flex-col gap-6 text-xl font-medium">
@@ -146,31 +146,31 @@
                     <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
                     <span class="text-emerald-400 font-medium">Open to Internships • Jan 2026</span>
                 </div>
-                
+
                 <h1 class="text-7xl md:text-8xl font-semibold leading-none logo-font tracking-tighter text-white">
                     Saragadam<br>Kalyan
                 </h1>
-                
+
                 <div class="text-3xl text-blue-400 font-medium flex items-center gap-3">
                     <span id="typing" class="typing">Aspiring Frontend &amp; AI Web Developer</span>
                 </div>
-                
+
                 <p class="text-xl text-zinc-400 max-w-md">
-                    2nd Year B.Tech CSE Student • Building beautiful, intelligent web experiences with modern tech.
+                    3rd Year B.Tech CSE Student • Building beautiful, intelligent web experiences with modern tech.
                 </p>
-                
+
                 <div class="flex items-center gap-4">
-                    <a href="#contact" 
+                    <a href="#contact"
                        class="px-8 py-4 bg-blue-600 hover:bg-blue-500 transition-all font-semibold rounded-3xl text-lg flex items-center gap-3">
                         Let's Connect
                         <i class="fas fa-arrow-right"></i>
                     </a>
-                    <a href="#projects" 
+                    <a href="#projects"
                        class="px-8 py-4 border border-white/30 hover:border-white/70 transition-all font-semibold rounded-3xl text-lg">
                         View Projects
                     </a>
                 </div>
-                
+
                 <div class="flex items-center gap-8 pt-8 text-sm">
                     <div>
                         <div class="text-emerald-400 text-2xl font-semibold">15+</div>
@@ -186,7 +186,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- PROFILE PHOTO -->
             <div class="flex justify-center md:justify-end">
                 <div class="relative">
@@ -202,13 +202,13 @@
                 </div>
             </div>
         </div>
-        
+
         <!-- SCROLL INDICATOR -->
         <div class="absolute bottom-10 left-1/2 flex flex-col items-center gap-2 text-xs text-zinc-500">
             <div class="w-px h-12 bg-gradient-to-b from-transparent via-zinc-400 to-transparent"></div>
             SCROLL
         </div>
-        
+
         <!-- SOCIAL FLOAT -->
         <div class="hidden lg:flex fixed right-8 bottom-12 flex-col gap-6">
             <a href="https://github.com/kalyan870" target="_blank" class="text-zinc-400 hover:text-white text-2xl transition-colors"><i class="fab fa-github"></i></a>
@@ -226,22 +226,22 @@
                         <span class="px-4 py-2 bg-white/5 rounded-full text-xs tracking-widest">WHO AM I</span>
                         <h2 class="text-6xl font-semibold logo-font tracking-tighter mt-6 leading-none">Passionate builder<br>of digital experiences</h2>
                         <div class="mt-8 text-zinc-400 text-lg">
-                            Currently pursuing B.Tech in Computer Science (2nd year) at Vignan's Institute of Information Technology, Visakhapatnam.
+                            Currently pursuing B.Tech in Computer Science (3rd year) at Vignan's Institute of Information Technology, Visakhapatnam.
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="md:col-span-7 space-y-8 text-zinc-300 text-lg leading-relaxed">
                     <p>
-                        I am a motivated 2nd-year Computer Science student with a strong passion for frontend web development and AI-powered applications. 
-                        I have hands-on experience with HTML, CSS, JavaScript, Python, and Machine Learning fundamentals. 
+                        I am a motivated 3rd-year Computer Science student with a strong passion for frontend web development and AI-powered applications.
+                        I have hands-on experience with HTML, CSS, JavaScript, Python, and Machine Learning fundamentals.
                         I actively practice Data Structures &amp; Algorithms on CodeChef (1★ rating, username: chinna_182) and am exploring Microsoft Azure cloud fundamentals.
                     </p>
                     <p>
-                        What sets me apart is my genuine interest in building useful, production-ready applications rather than just completing coursework. 
+                        What sets me apart is my genuine interest in building useful, production-ready applications rather than just completing coursework.
                         I enjoy learning by building, breaking, and improving projects continuously. I am currently seeking frontend, full-stack, or AI-web development opportunities where I can contribute meaningfully while growing rapidly.
                     </p>
-                    
+
                     <!-- PERSONAL DETAILS GRID -->
                     <div class="grid grid-cols-2 gap-8 pt-8 border-t border-white/10">
                         <div>
@@ -268,7 +268,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- COVER LETTER SUMMARY -->
                     <div class="pt-12 border-t border-white/10">
                         <div class="italic text-zinc-400 text-base border-l-4 border-blue-500 pl-6">
@@ -290,7 +290,7 @@
                     <h2 class="text-5xl font-semibold logo-font tracking-tighter">Education</h2>
                 </div>
             </div>
-            
+
             <div class="max-w-2xl">
                 <div class="glass border border-white/10 rounded-3xl p-8">
                     <div class="flex justify-between items-start">
@@ -300,7 +300,7 @@
                         </div>
                         <div class="text-right">
                             <div class="bg-white/10 text-xs px-4 py-1 rounded-2xl">2024 — 2028</div>
-                            <div class="text-xs text-zinc-500 mt-2">2nd Year • CGPA: Pursuing</div>
+                            <div class="text-xs text-zinc-500 mt-2">3rd Year • CGPA: Pursuing</div>
                         </div>
                     </div>
                     <div class="mt-8 text-zinc-400">
@@ -318,7 +318,7 @@
                 <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">MY TOOLKIT</span>
                 <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Skills &amp; Technologies</h2>
             </div>
-            
+
             <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
                 <!-- Skill cards -->
                 <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
@@ -329,7 +329,7 @@
                         <div class="skill-bar h-1 w-[95%] bg-gradient-to-r from-blue-400 to-cyan-400 rounded-full"></div>
                     </div>
                 </div>
-                
+
                 <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
                     <div class="text-5xl mb-6">🐍</div>
                     <div class="font-semibold text-2xl mb-2">Python &amp; ML</div>
@@ -338,7 +338,7 @@
                         <div class="skill-bar h-1 w-[85%] bg-gradient-to-r from-emerald-400 to-cyan-400 rounded-full"></div>
                     </div>
                 </div>
-                
+
                 <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
                     <div class="text-5xl mb-6">☁️</div>
                     <div class="font-semibold text-2xl mb-2">Cloud &amp; Tools</div>
@@ -347,7 +347,7 @@
                         <div class="skill-bar h-1 w-[80%] bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>
                     </div>
                 </div>
-                
+
                 <div class="glass border border-white/10 rounded-3xl p-8 hover:border-blue-500/30 group">
                     <div class="text-5xl mb-6">⚡</div>
                     <div class="font-semibold text-2xl mb-2">Problem Solving</div>
@@ -370,11 +370,11 @@
                 </div>
                 <a href="https://github.com/kalyan870" target="_blank"
                    class="flex items-center gap-3 text-sm font-medium group">
-                    ALL PROJECTS ON GITHUB 
+                    ALL PROJECTS ON GITHUB
                     <span class="group-hover:translate-x-1 transition">→</span>
                 </a>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-8">
                 <!-- Project 1 -->
                 <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
@@ -395,7 +395,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
                     <div class="h-56 bg-gradient-to-br from-purple-500/20 to-pink-500/20 flex items-center justify-center text-6xl">
@@ -415,7 +415,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 3 -->
                 <div class="project-card glass border border-white/10 rounded-3xl overflow-hidden">
                     <div class="h-56 bg-gradient-to-br from-amber-500/20 to-orange-500/20 flex items-center justify-center text-6xl">
@@ -446,7 +446,7 @@
                 <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">PROOF OF LEARNING</span>
                 <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Certifications</h2>
             </div>
-            
+
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="glass border border-white/10 rounded-3xl p-8 hover:scale-105 transition-transform">
                     <div class="text-4xl mb-6">🤖</div>
@@ -484,7 +484,7 @@
                 <span class="px-5 py-2 bg-white/5 rounded-3xl text-sm">RECOGNITION</span>
                 <h2 class="text-5xl font-semibold logo-font tracking-tighter mt-4">Achievements &amp; Awards</h2>
             </div>
-            
+
             <div class="max-w-2xl mx-auto space-y-8">
                 <div class="flex gap-8 items-center">
                     <div class="w-16 h-16 bg-gradient-to-br from-amber-400 to-yellow-500 rounded-2xl flex-shrink-0 flex items-center justify-center text-3xl">🏆</div>
@@ -513,7 +513,7 @@
                     <div class="mt-10 text-zinc-400 max-w-md">
                         Whether you're hiring for an internship, have a project in mind, or just want to chat about web development or AI — I'm all ears.
                     </div>
-                    
+
                     <div class="mt-16 space-y-6">
                         <div class="flex items-center gap-6">
                             <div class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center text-2xl">📍</div>
@@ -538,7 +538,7 @@
                         </a>
                     </div>
                 </div>
-                
+
                 <!-- CONTACT FORM -->
                 <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-8">
                     <div>
@@ -581,27 +581,27 @@
 
     <script>
         // Tailwind script already loaded via CDN
-        
+
         function toggleMobileMenu() {
             const menu = document.getElementById('mobileMenu')
             menu.classList.toggle('hidden')
         }
-        
+
         // Typing effect
         const typingElement = document.getElementById('typing')
         const phrases = [
             "Aspiring Frontend & AI Web Developer",
-            "2nd Year CSE Student",
+            "3rd Year CSE Student",
             "Building Intelligent Web Apps"
         ]
         let phraseIndex = 0
         let charIndex = 0
         let currentPhrase = ''
         let isDeleting = false
-        
+
         function typeEffect() {
             const currentText = phrases[phraseIndex]
-            
+
             if (isDeleting) {
                 currentPhrase = currentText.substring(0, charIndex - 1)
                 charIndex--
@@ -609,11 +609,11 @@
                 currentPhrase = currentText.substring(0, charIndex + 1)
                 charIndex++
             }
-            
+
             typingElement.textContent = currentPhrase
-            
+
             let typeSpeed = isDeleting ? 30 : 60
-            
+
             if (!isDeleting && charIndex === currentText.length) {
                 typeSpeed = 1500
                 isDeleting = true
@@ -622,10 +622,10 @@
                 phraseIndex = (phraseIndex + 1) % phrases.length
                 typeSpeed = 300
             }
-            
+
             setTimeout(typeEffect, typeSpeed)
         }
-        
+
         // Initialize typing after load
         window.onload = () => {
             // Trigger skill bars animation
@@ -637,19 +637,19 @@
                     bar.style.width = width
                 }, 800)
             })
-            
+
             // Start typing
             setTimeout(() => {
                 typeEffect()
             }, 800)
-            
+
             // Profile image fallback if not found
             const profileImg = document.getElementById('profileImg')
             profileImg.onerror = () => {
                 profileImg.src = 'https://picsum.photos/id/64/600/600'
             }
         }
-        
+
         // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -665,7 +665,7 @@
                 }
             })
         })
-        
+
         // Keyboard shortcut hint
         console.log('%c👋 Hi there! Press "K" for a surprise.', 'color:#60a5fa; font-family:monospace')
         document.addEventListener('keydown', (e) => {
