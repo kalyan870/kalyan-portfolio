@@ -1,6 +1,7 @@
 # Kalyan Portfolio
 
 <p align="center"><strong>A personal portfolio for presenting Kalyan's student profile, selected work, skills, and resume.</strong></p>
+**Live link:** [https://kalyan-portfolio95.netlify.app/](https://kalyan-portfolio95.netlify.app/)
 
 <p align="center">Static web · HTML · CSS · JavaScript</p>
 
@@ -9,6 +10,11 @@
 The repository contains a single-page portfolio, a profile image, and a downloadable PDF resume. The page introduces Kalyan as a third-year B.Tech CSE student and links to project and professional profiles.
 
 ## Architecture
+
+![kalyan-portfolio architecture map](docs/images/kalyan-portfolio-architecture.png)
+
+[Architecture notes](docs/architecture.md) · [Editable SVG](docs/images/kalyan-portfolio-architecture.svg)
+
 
 ```mermaid
 flowchart LR
